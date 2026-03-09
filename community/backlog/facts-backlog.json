@@ -291,30 +291,30 @@
     "id": 49,
     "fact": "The word 'amae' (甘え) describes depending on another's goodwill - a uniquely Japanese concept of presuming on someone's affection.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 50,
     "fact": "Japanese farmers grow cubic watermelons in glass boxes - not for taste but because they're easier to stack and refrigerate.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 51,
     "fact": "There's a Japanese practice of 'honne and tatemae' - your true feelings (honne) versus your public facade (tatemae) - both are considered valid.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 52,
     "fact": "Japan's Nakizumo festival has sumo wrestlers compete to make babies cry first - crying is believed to ward off evil spirits.",
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "id": 53,
     "fact": "The Japanese word 'shibui' (渋い) describes a subtle, unobtrusive beauty that grows on you over time - the opposite of flashy.",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
