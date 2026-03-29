@@ -60,7 +60,7 @@
     "example": "試験でカンニングしてはいけません。",
     "id": 7,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "termA": "リベンジ (ribenji)",
@@ -240,7 +240,7 @@
     "example": "試験でカンニングしてはいけません。",
     "id": 27,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "termA": "リベンジ (ribenji)",
@@ -602,7 +602,7 @@
     "example": "試験でカンニングしてはいけません。",
     "id": 67,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "termA": "リベンジ (ribenji)",
@@ -682,7 +682,7 @@
     "explanation": "Means very energetic mood. (Set 4)",
     "example": "試合前はみんなハイテンションだった。",
     "id": 76,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -782,7 +782,7 @@
     "example": "試験でカンニングしてはいけません。",
     "id": 87,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "termA": "リベンジ (ribenji)",
@@ -962,7 +962,7 @@
     "example": "試験でカンニングしてはいけません。",
     "id": 107,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "termA": "リベンジ (ribenji)",
