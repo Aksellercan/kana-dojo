@@ -502,15 +502,60 @@
     "Shodo"
   ],
   "correctIndex": 0
-},{
-  "question": "Which Japanese castle is nicknamed the \"White Heron\" for its bright exterior? (Community variation 9)",
+},
+  {
+  "question": "What is the Japanese word for \"goodbye\"? (Community variation 32)",
   "difficulty": "easy",
   "answers": [
-    "Himeji Castle",
-    "Osaka Castle",
-    "Matsumoto Castle",
-    "Nijo Castle"
+    "Sayonara",
+    "Konnichiwa",
+    "Arigatou",
+    "Oyasumi"
   ],
   "correctIndex": 0
+},
+{
+  "question": "What is the Japanese word for \"goodbye\"? (Community variation 32)",
+  "difficulty": "easy",
+  "answers": [
+    "Sayonara",
+    "Konnichiwa",
+    "Arigatou",
+    "Oyasumi"
+  ],
+  "correctIndex": 0
+},
+  {
+  "question": "Which animal is famously associated with Inari shrines in Japan?",
+  "difficulty": "easy",
+  "answers": [
+    "Fox",
+    "Crane",
+    "Turtle",
+    "Deer"
+  ],
+  "correctIndex": 0
+},
+{
+  "question": "Which mountain is Japan’s highest peak?",
+  "difficulty": "easy",
+  "answers": [
+    "Mount Fuji",
+    "Mount Kita",
+    "Mount Tate",
+    "Mount Haku"
+  ],
+  "correctIndex": 0
+},
+  {
+  "question": "What is the name of Japan's traditional theatre known for stylized performances and masks? (Community variation 6)",
+  "difficulty": "easy",
+  "answers": [
+    "Kabuki",
+    "Noh",
+    "Rakugo",
+    "Bunraku"
+  ],
+  "correctIndex": 1
 }
 ]
