@@ -203,7 +203,7 @@
     "explanation": "コンセント means electrical outlet. (Set 2)",
     "example": "コンセントが足りないので延長コードを使います。",
     "id": 23,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
