@@ -626,8 +626,10 @@
     "dont": "割り込む",
     "note": "駅・店頭では順番厳守。",
     "id": 70,
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "armorbreak001",
+    "completedPR": 13163
   },
   {
     "situation": "贈り物 4",
