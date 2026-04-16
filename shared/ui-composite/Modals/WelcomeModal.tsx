@@ -42,19 +42,28 @@ const CHAOS_THEME_GRADIENT = `linear-gradient(
 )`;
 
 const floatingIconClassesBySize = {
-  lg: 'motion-safe:animate-float flex h-12 w-12 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl border-b-4 sm:border-b-6 border-(--secondary-color-accent) bg-(--secondary-color) leading-none text-(--background-color) [--float-distance:-4px] [&>svg]:h-7 [&>svg]:w-7',
-  md: 'motion-safe:animate-float flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border-b-4 border-(--secondary-color-accent) bg-(--secondary-color) leading-none text-(--background-color) [--float-distance:-3px] [&>svg]:h-5 [&>svg]:w-5',
-  sm: 'motion-safe:animate-float flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border-b-4 border-(--secondary-color-accent) bg-(--secondary-color) leading-none text-(--background-color) [--float-distance:-2px] [&>svg]:h-4 [&>svg]:w-4',
+  lg: 'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl border-b-4 sm:border-b-6 leading-none text-(--background-color) [--float-distance:-4px] [&>svg]:h-7 [&>svg]:w-7',
+  md: 'flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border-b-4 leading-none text-(--background-color) [--float-distance:-3px] [&>svg]:h-5 [&>svg]:w-5',
+  sm: 'flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border-b-4 leading-none text-(--background-color) [--float-distance:-2px] [&>svg]:h-4 [&>svg]:w-4',
+} as const;
+
+const floatingIconToneClasses = {
+  secondary: 'border-(--secondary-color-accent) bg-(--secondary-color)',
+  main: 'border-(--main-color-accent) bg-(--main-color)',
 } as const;
 
 function FloatingIcon({
   children,
   size = 'md',
+  tone = 'secondary',
+  animated = true,
   animationDelayClass,
   className,
 }: {
   children: ReactNode;
   size?: keyof typeof floatingIconClassesBySize;
+  tone?: keyof typeof floatingIconToneClasses;
+  animated?: boolean;
   animationDelayClass?: string;
   className?: string;
 }) {
@@ -62,6 +71,8 @@ function FloatingIcon({
     <span
       className={clsx(
         floatingIconClassesBySize[size],
+        floatingIconToneClasses[tone],
+        animated && 'motion-safe:animate-float',
         animationDelayClass,
         className,
       )}
@@ -214,29 +225,36 @@ const WelcomeModal = () => {
             </div>
 
             <div className='space-y-4 text-left'>
-              <div className='flex items-center gap-3 rounded-lg bg-(--main-color) p-3'>
-                <FloatingIcon size='md'>
+              <div className='flex items-center gap-3 rounded-lg bg-(--background-color) p-3'>
+                <FloatingIcon
+                  size='md'
+                  tone='main'
+                >
                   <Palette />
                 </FloatingIcon>
                 <div>
-                  <h3 className='font-semibold text-(--background-color)'>
+                  <h3 className='font-semibold text-(--main-color)'>
                     {t('features.theme.title')}
                   </h3>
-                  <p className='text-sm text-(--background-color)'>
+                  <p className='text-sm text-(--secondary-color)'>
                     {t('features.theme.description')}
                   </p>
                 </div>
               </div>
 
-              <div className='flex items-center gap-3 rounded-lg bg-(--main-color) p-3'>
-                <FloatingIcon size='md' animationDelayClass='[animation-delay:120ms]'>
+              <div className='flex items-center gap-3 rounded-lg bg-(--background-color) p-3'>
+                <FloatingIcon
+                  size='md'
+                  tone='main'
+                  animationDelayClass='[animation-delay:120ms]'
+                >
                   <Type />
                 </FloatingIcon>
                 <div>
-                  <h3 className='font-semibold text-(--background-color)'>
+                  <h3 className='font-semibold text-(--main-color)'>
                     {t('features.font.title')}
                   </h3>
-                  <p className='text-sm text-(--background-color)'>
+                  <p className='text-sm text-(--secondary-color)'>
                     {t('features.font.description')}
                   </p>
                 </div>
@@ -451,6 +469,7 @@ const WelcomeModal = () => {
                       <div className='flex items-center gap-2 text-lg font-medium'>
                         <FloatingIcon
                           size='sm'
+                          animated={false}
                           animationDelayClass={
                             themeSetIndex % 2 === 1 ? '[animation-delay:120ms]' : undefined
                           }
@@ -741,7 +760,7 @@ const WelcomeModal = () => {
               <button
                 onClick={handleClose}
                 className={clsx(
-                  'cursor-pointer rounded-lg p-2 transition-colors duration-200',
+                  'cursor-pointer rounded-lg p-2 transition-colors duration-50',
                   'hover:bg-(--background-color)',
                   'text-(--secondary-color) hover:text-(--main-color)',
                 )}
@@ -769,13 +788,16 @@ const WelcomeModal = () => {
                 <button
                   onClick={handlePrevious}
                   className={clsx(
-                    'flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 sm:px-6 sm:py-3',
+                    'group flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 sm:px-6 sm:py-3',
                     'text-(--secondary-color) hover:text-(--main-color)',
-                    'transition-all duration-100 hover:bg-(--background-color)',
+                    'transition-all duration-50 hover:bg-(--background-color)',
                     'text-sm sm:text-base',
                   )}
                 >
-                  <ChevronLeft size={16} className='sm:h-[18px] sm:w-[18px]' />
+                  <ChevronLeft
+                    size={18}
+                    className='shrink-0 text-(--main-color) group-hover:text-(--secondary-color) sm:h-[20px] sm:w-[20px]'
+                  />
                   <span className='hidden sm:inline'>
                     {t('navigation.previous')}
                   </span>
@@ -785,14 +807,14 @@ const WelcomeModal = () => {
                 <div />
               )}
 
-              <button
-                onClick={handleNext}
-                className={clsx(
-                  'flex cursor-pointer items-center justify-center gap-2 rounded-xl px-6 py-2 sm:px-8 sm:py-3',
-                  'text-sm font-medium text-(--main-color) sm:text-base',
-                  'transition-all duration-100 hover:bg-(--background-color) active:scale-98',
-                )}
-              >
+                <button
+                  onClick={handleNext}
+                  className={clsx(
+                    'group flex cursor-pointer items-center justify-center gap-2 rounded-xl px-6 py-2 sm:px-8 sm:py-3',
+                    'text-sm font-medium text-(--main-color) sm:text-base',
+                    'transition-all duration-50 hover:bg-(--background-color) active:scale-98',
+                  )}
+                >
                 <span>
                   {step === 'welcome'
                     ? t('navigation.getStarted')
@@ -800,7 +822,10 @@ const WelcomeModal = () => {
                       ? t('navigation.finishSetup')
                       : t('navigation.next')}
                 </span>
-                <ChevronRight size={16} className='sm:h-[18px] sm:w-[18px]' />
+                <ChevronRight
+                  size={18}
+                  className='shrink-0 text-(--secondary-color) sm:h-[20px] sm:w-[20px]'
+                />
               </button>
             </div>
           </div>
@@ -811,4 +836,5 @@ const WelcomeModal = () => {
 };
 
 export default WelcomeModal;
+
 
