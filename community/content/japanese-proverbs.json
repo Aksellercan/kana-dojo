@@ -492,9 +492,93 @@
     "meaning": "Acting can lead to luck (or trouble)"
   },
   {
-  "japanese": "七転び八起き",
-  "romaji": "Nanakorobi yaoki",
-  "english": "Fall seven times, get up eight",
-  "meaning": "Never give up"
+    "japanese": "七転び八起き",
+    "romaji": "Nanakorobi yaoki",
+    "english": "Fall seven times, get up eight",
+    "meaning": "Never give up"
+  },
+  {
+    "japanese": "縁は異なもの味なもの",
+    "romaji": "En wa inamono aji na mono",
+    "english": "Fate is strange yet delightful",
+    "meaning": "Unexpected connections can be good"
+  },
+  {
+    "japanese": "後悔先に立たず",
+    "romaji": "Koukai saki ni tatazu",
+    "english": "Regret does not stand before",
+    "meaning": "It's too late for regrets"
+  },
+  {
+    "japanese": "後悔先に立たず",
+    "romaji": "Koukai saki ni tatazu",
+    "english": "Regret does not stand before",
+    "meaning": "It's too late for regrets"
+  },
+  {
+    "japanese": "泣きっ面に蜂",
+    "romaji": "Nakittsura ni hachi",
+    "english": "A bee on a crying face",
+    "meaning": "Misfortune never comes alone"
+  },
+  {
+  "japanese": "口は災いの元",
+  "romaji": "Kuchi wa wazawai no moto",
+  "english": "The mouth is the source of disaster",
+  "meaning": "Careless words cause trouble"
+  }, 
+  {
+  "japanese": "石の上にも三年",
+  "romaji": "Ishi no ue ni mo sannen",
+  "english": "Three years on a stone",
+  "meaning": "Perseverance prevails"
+  },
+  {
+  "japanese": "猿も木から落ちる",
+  "romaji": "Saru mo ki kara ochiru",
+  "english": "Even monkeys fall from trees",
+  "meaning": "Even experts can make mistakes"
+  },
+  {
+    "japanese": "二度あることは三度ある",
+    "romaji": "Nido aru koto wa sando aru",
+    "english": "What happens twice will happen a third time",
+    "meaning": "Patterns tend to repeat"
+  },
+  {
+    "japanese": "楽あれば苦あり",
+    "romaji": "Raku areba ku ari",
+    "english": "After ease comes hardship",
+    "meaning": "Good times and bad times alternate"
+  },
+  {
+    "japanese": "良薬は口に苦し",
+    "romaji": "Ryouyaku wa kuchi ni nigashi",
+    "english": "Good medicine tastes bitter",
+    "meaning": "Helpful advice often sounds harsh"
+  },
+  {
+  "japanese": "蛙の子は蛙",
+  "romaji": "Kaeru no ko wa kaeru",
+  "english": "A frog's child is a frog",
+  "meaning": "Children resemble their parents"
+  },
+  {
+  "japanese": "馬子にも衣装",
+  "romaji": "Mago ni mo ishou",
+  "english": "Even a packhorse driver looks good in fine clothes",
+  "meaning": "Clothes make the person"
+  },
+  {
+  "japanese": "人のふり見て我がふり直せ",
+  "romaji": "Hito no furi mite waga furi naose",
+  "english": "Watch others and correct yourself",
+  "meaning": "Learn from others' behavior"
+  },
+  {
+  "japanese": "善は急げ",
+  "romaji": "Zen wa isoge",
+  "english": "Hurry to do good",
+  "meaning": "Do worthwhile things promptly"
   }
 ]
